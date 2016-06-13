@@ -1,0 +1,34 @@
+﻿@model List<NHibernate_Entrevista.Entidades.Cliente>
+@{
+    ViewBag.Title = "Listar";
+}
+
+<h2>Lista</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Idade</th>
+            <th>Cpf</th>
+            <th>Rg</th>
+            <th colspan="2">Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var cli in @Model)
+        {
+            <tr>
+                <td>@cli.Id</td>
+                <td>@cli.Nome</td>
+                <td>@cli.Idade</td>
+                <td>@cli.Rg</td>
+                <td>@cli.Cpf</td>
+                <td><a href="@Url.Action("Editar", "Cliente", new {id = @cli.Id})">Editar</a></td>
+                <td><a href="@Url.Action("Deletar", "Cliente", @cli)">Deletar</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a href="@Url.Action("Index", "Cliente")">Voltar</a>

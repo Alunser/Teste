@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "New";
+}
+
+<h2>Cadastrar Clientes</h2>
+
+<form action="@Url.Action("Salvar", "Cliente")">
+    <label>
+        Nome
+        <input name="cliente.Nome" />
+    </label>
+    <label>
+        Idade
+        <input name="cliente.Idade" />
+    </label>
+    <label>
+        Cpf
+        <input name="cliente.Cpf" />
+    </label>
+    <label>
+        Rg
+        <input name="cliente.Rg" />
+    </label>
+    <input type="submit" value="Salvar" />
+    <a href="@Url.Action("Index", "Cliente")">Voltar</a>
+</form>

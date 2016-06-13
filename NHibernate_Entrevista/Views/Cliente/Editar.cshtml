@@ -1,0 +1,28 @@
+﻿@model NHibernate_Entrevista.Entidades.Cliente
+@{
+    ViewBag.Title = "Editar";
+}
+
+<h2>Editar Cliente</h2>
+
+<form action="@Url.Action("Atualizar", "Cliente")">
+    <input type="hidden" name="cliente.Id" value="@Model.Id" />
+    <label>
+        Nome
+        <input name="cliente.Nome" value="@Model.Nome" />
+    </label>
+    <label>
+        Idade
+        <input name="cliente.Idade" value="@Model.Idade" />
+    </label>
+    <label>
+        Cpf
+        <input name="cliente.Cpf" value="@Model.Cpf" />
+    </label>
+    <label>
+        Rg
+        <input name="cliente.Rg" value="@Model.Rg" />
+    </label>
+    <input type="submit" value="Salvar" />
+    <a href="@Url.Action("Listar", "Cliente")">Voltar</a>
+</form>
