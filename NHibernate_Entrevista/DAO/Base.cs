@@ -19,5 +19,6 @@ namespace NHibernate.DAO
         public abstract void Atualizar<T>(T obj);
 
         public abstract List<T> Listar<T>();
+        //asas
     }
 }
